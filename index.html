@@ -47,7 +47,6 @@
 
         <main class="max-w-screen-xl  mt-20  mx-auto px-16 lg:px-28">
 
-
                 <!-- header section -->
                 <header class="lg:flex pt-10 mb-20">
                         <div class="diff aspect-[16/9]">
@@ -58,7 +57,7 @@
                                         </div>
                                 </div>
                                 <div class="diff-item-2">
-                                        <div class="bg-base-200 grid place-content-center text-9xl font-black">NABATAT
+                                        <div class="bg-base-200 grid place-content-center text-9xl font-black ">NABATAT
                                         </div>
                                 </div>
                                 <div class="diff-resizer"></div>
@@ -66,32 +65,41 @@
                         <!--img-->
                 </header>
 
-                <!--Feature section -->
+                <!-- secach section -->
+                <section class="mb-8">
+                        <div class="flex justify-center">
+                            <input type="text" id="searchInput" class="input input-bordered w-64" placeholder="Search equipment...">
+                            <button class="btn btn-primary ml-2" onclick="searchEquipment()">Search</button>
+                        </div>
+                    </section>
+
+                    <!-- No match message -->
+            <p id="noMatchMessage" class="text-center text-red-500 mt-4 hidden">No match found</p>
+        </section>
+
+                <!--Equment  section -->
                 <section class="py-8 lg:py-24">
                         <!-- title -->
                         <div class="text-center">
                                 <h1 class="sm:text-3xl md:text-3xl font-bold mb-4">Equpment For Landsciping</h1>
-                                <p class="text-gray-600 max-w-2xl mx-auto">There are many variations of passages of
-                                        Lorem Ipsum available, but the majority have suffered alteration in some form,
-                                        by injected humour, or randomised words which don't look even slightly
-                                        believable. </p>
+                                <p class="text-gray-600 max-w-2xl mx-auto">There are many  Equpment  For Landsciping Some For Campe Some Roads Graound , Some For Nursery . </p>
                         </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 " id="equipmentCards">
                                 <!-- Card 1 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/Aspal.jpeg" alt="">
                                         <div class="p-10 space-y-5">
                                                 <h2 class="font-bold text-xl">ROBIN ASPHALT CUTTER</h2>
-                                                <p class="text-gray-600">this equpme for Roads ground <br> this equpment
-                                                        total 2
+                                                <p class="text-gray-600"> ROBIN ASPHALT CUTTER <br> Total : 2 EA <br><span class="font-bold"> Stock :  </span> 2 EA  <br>
+                                                       
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-10  mx-auto"
-                                                        onclick="document.getElementById('my_modal_1').showModal()">Click</button>
+                                                        onclick="document.getElementById('my_modal_1').showModal()">Condition</button>
                                                 <dialog id="my_modal_1" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">in store</h3>
-                                                                <p class="py-4">Engr Ali Take date :24-july-2024
+                                                                <p class="py-4"> This Equpment AV in Store ....
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -104,20 +112,19 @@
                                 </div>
 
                                 <!-- Card 2 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/Pressur_washer briggs& stratton.jpeg"
                                                 alt="">
                                         <div class="p-4 space-y-5">
-                                                <h2 class="font-bold text-xl">HUSQVARNA PLATE <br> COMPACTOR</h2>
-                                                <p class="text-gray-600">Creamer could be <br> replaced by fresh milk
+                                                <h2 class="font-bold text-xl">PRESSUR WASHER BRIGGS & STRATTON </h2>
+                                                <p class="text-gray-600">PRESSUR WASHER BRIGGS & STRATTON <br> Total  : 2 EA <br><span class="font-bold">Stock  : </span> 2 EA
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-10"
-                                                        onclick="document.getElementById('my_modal_3').showModal()">Click</button>
+                                                        onclick="document.getElementById('my_modal_3').showModal()">Condition</button>
                                                 <dialog id="my_modal_3" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">IN STORE</h3>
-                                                                <p class="py-4">THIS HUSQVARNA PLATE COMPACTOR FOR
-                                                                        Landsciping IN SIDE CUTTON VESITE IN DOOR
+                                                                <p class="py-4">THIS PRESSUR WASHER BRIGGS & STRATTON In Store.........
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -132,14 +139,14 @@
                                 <!-- Repeat the same structure for the remaining 8 cards, each with unique modal IDs -->
 
                                 <!-- Card 3 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/HUSQVARNA PLATE COMPACTOR.jpeg" alt="">
                                         <div class="p-4 space-y-5">
                                                 <h2 class="font-bold text-xl mt-10">HUSQVARNA PLATE <br> COMPACTOR</h2>
-                                                <p class="text-gray-600">Creamer could be <br> replaced by fresh milk
+                                                <p class="text-gray-600">  HUSQVARNA PLATE COMPACTOR <br> Total  : 2  EA   <br><span class="font-bold"> Stock  : </span> 2 : EA <br>
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-24"
-                                                        onclick="document.getElementById('my_modal_3').showModal()">Click</button>
+                                                        onclick="document.getElementById('my_modal_3').showModal()">Condition</button>
                                                 <dialog id="my_modal_3" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">IN STORE</h3>
@@ -157,17 +164,17 @@
                                 </div>
 
                                 <!-- Card 4 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/ATLAS COPCO JUMPING COMPACOR.jpeg"
                                                 alt="">
                                         <div class="p-4 space-y-5">
                                                 <h2 class="font-bold text-xl mt-24">ATLAS COPCO <br> JUMPING COMPACOR
                                                 </h2>
-                                                <p class="text-gray-600">this Equpment for <br> rodas grounds
+                                                <p class="text-gray-600"> ATLAS COPCO JUMPING COMPACOR  <br> Total : 2 EA <br> <span class="font-bold">Stock : </span> 2 EA
                                                 </p>
                                                 <button class="btn btn-outline  btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
-                                                        document.getElementById('my_modal_4').showModal()">Click</button>
+                                                        document.getElementById('my_modal_4').showModal()">Condition</button>
                                                 <dialog id="my_modal_4" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">in SOTRE</h3>
@@ -184,22 +191,22 @@
                                 </div>
 
                                 <!-- Card 5 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/NORDIKA PORTABLE WELDING MACHING.jpeg"
                                                 alt="">
                                         <div class="p-4 space-y-5">
                                                 <h2 class="font-bold text-xl mt-20">NORDIKA PORTABLE <br> WELDING
                                                         MACHING</h2>
-                                                <p class="text-gray-600">This Equpment <br> NORDIKA PORTABLE WELDING
-                                                        MACHING Toal Ttwo
+                                                <p class="text-gray-600">This Equpment  NORDIKA PORTABLE WELDING
+                                                        MACHING  <br> Total : 2 EA <br> <span class="font-bold"> Stock  : </span> 1 EA
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
-                                                        document.getElementById('my_modal_5').showModal()">Click</button>
+                                                        document.getElementById('my_modal_5').showModal()">Condition</button>
                                                 <dialog id="my_modal_5" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
-                                                                <p class="py-4">Mostafa Dwood TAKE DATE:24-AUG-2024
+                                                                <p class="py-4">Mostafa Dwood TAKE 
                                                                         Campe Total 2 EA one side One In store
                                                                 </p>
                                                                 <div class="modal-action">
@@ -213,20 +220,20 @@
                                 </div>
 
                                 <!-- Card 6 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
-                                        <img class="mx-auto W-1/2 " src="./images/BOSCH CIRCULAR STEEL CUTTER.webp"
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
+                                        <img class="mx-auto w-1/2 " src="./images/BOSCH CIRCULAR STEEL CUTTER.webp"
                                                 alt="">
-                                        <div class="p-4 space-y-2">
+                                        <div class=" p-2 space-y-2 mt-32">
                                                 <h2 class="font-bold text-xl">BOSCH CIRCULAR <br> STEEL CUTTER </h2>
-                                                <p class="text-gray-600">BOSCH CIRCULAR STEEL CUTTER <br> TOTAL EA TWO
-                                                </p>
+                                                <p class="text-gray-600">BOSCH CIRCULAR STEEL CUTTER <br> Total : 2  EA  <br><span class="font-bold"> Stock  : </span> 2 EA
+                                                </p> 
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
-                                                        document.getElementById('my_modal_6').showModal()">Click</button>
+                                                        document.getElementById('my_modal_6').showModal()">Condition</button>
                                                 <dialog id="my_modal_6" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
-                                                                <p class="py-4">ANTONIWO TAKE DATE:24-AUG-2024 Nursery
+                                                        <p class="py-4"> This Equpment Use Mostafa Dwaood for Roads GroundS & Campe
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -239,20 +246,19 @@
                                 </div>
 
                                 <!-- Card 7 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/MITSUBISHI & KAZZ BRUSH CUTTER.jpeg"
                                                 alt="">
                                         <div class="p-4 space-y-4">
                                                 <h2 class="font-bold text-xl">MITSUBISHI & KAZZ <br> BRUSH CUTTER</h2>
-                                                <p class="text-gray-600">Mitsube & kazz brush cutter <br> Total (11EA)
+                                                <p class="text-gray-600">Mitsube & kazz brush cutter  <br>  Total  : 11 EA  <br> <span class="font-bold">Stock : </span> 11 EA <br>
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto"
                                                         onclick="document.getElementById('my_modal_7').showModal()">condition</button>
                                                 <dialog id="my_modal_7" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
-                                                                <p class="py-4">Engr Rads Take some 8 EA One Side (3 In
-                                                                        STORE)
+                                                                <p class="py-4">  Mitsube & kazz brush cutter  this Equpment for Landsciping
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -265,21 +271,21 @@
                                 </div>
 
                                 <!-- Card 8 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/MARUYAMA TPP27 PRUNING SAW SMALL.jpeg"
                                                 alt="">
                                         <div class="p-4 space-y-3">
                                                 <h2 class="font-bold text-xl">MARUYAMA TPP27 <br> PRUNING SAW SMALL</h2>
-                                                <p class="text-gray-600">MARUYAMA TPP27 PRUNING SAW SMALL<br> This
-                                                        Equpmet Total (8 EA) 4 one side (3 in store) (1 Damage)
+                                                <p class="text-gray-600">MARUYAMA TPP27 PRUNING SAW SMALL<br> Total : 8 EA <br> <span class="font-bold"> Stock :</span> 3 EA <br>
+                                                       
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
-                                                        document.getElementById('my_modal_8').showModal()">Click</button>
+                                                        document.getElementById('my_modal_8').showModal()">Condition</button>
                                                 <dialog id="my_modal_8" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
-                                                                <p class="py-4">Engr reda Take:24-aug-2024 For
+                                                                <p class="py-4"> Equpmet Total (8 EA) 4 one side (3 in store) (1 Damage)
                                                                         Landsciping
                                                                 </p>
                                                                 <div class="modal-action">
@@ -293,15 +299,15 @@
                                 </div>
 
                                 <!-- Card 9 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/SULLAIR JACK HAMMER.jpeg" alt="">
                                         <div class="p-4 space-y-4 mt-3">
                                                 <h2 class="font-bold text-xl">SULLAIR JACK HAMMER</h2>
-                                                <p class="text-gray-600">SULLAIR JACK HAMMER <br> Total (1EA)
+                                                <p class="text-gray-600">SULLAIR JACK HAMMER <br>  Total :  1EA <br> <span class=" font-bold">Stock : </span> 1 EA <br>
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
-                                                        document.getElementById('my_modal_9').showModal()">Click</button>
+                                                        document.getElementById('my_modal_9').showModal()">Condition</button>
                                                 <dialog id="my_modal_9" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">In store</h3>
@@ -318,23 +324,23 @@
                                 </div>
 
                                 <!-- Card 10 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4"
                                                 src="./images/DYNA FOG SUPER HAWK FOGGING MAVHINE- SMALL.jpeg" alt="">
-                                        <div class="p-4 mt-5 space-y-4">
+                                        <div class="p-4 mt-2 space-y-4">
                                                 <h2 class="font-bold text-xl">DYNA FOG SUPER HAWK <br> FOGGING MAVHINE-
                                                         SMALL</h2>
-                                                <p class="text-gray-600">DYNA FOG SUPER HAWK<br> DYNA FOG SUPER HAWK
-                                                        TOTAL (8EA)
+                                                <p class="text-gray-600">DYNA FOG SUPER HAWK DYNA FOG SUPER HAWK <br> Total  : 8 EA <br> <span class=" font-bold"> Stock :</span> 8 EA
+                                                       
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
-                                                        document.getElementById('my_modal_10').showModal()">Click</button>
+                                                        document.getElementById('my_modal_10').showModal()">Condition</button>
                                                 <dialog id="my_modal_10" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">IN-STORE</h3>
-                                                                <p class="py-4">LOCATION : IN STORE SECOND ROOM VISE OF
-                                                                        OOFFICE ROOM
+                                                                <p class="py-4">LOCATION : IN STORE SECOND ROOM VE SIDE  OF
+                                                                        OFFICE ROOM
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -346,22 +352,22 @@
                                         </div>
                                 </div>
                                 <!-- Card 11 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden space-y-5">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden space-y-5 equipment-card">
                                         <img class="mx-auto pt-4 mt-20"
                                                 src="./images/DYNA FOG FOGGING MACHINE- BIG.jpeg" alt="">
                                         <div class="p-4 mt-6">
-                                                <h2 class="font-bold text-xl">DYNA FOG FOGGING <br> MACHINE- BIG</h2>
-                                                <p class="text-gray-600">DYNA FOG FOGGING <br> MACHINE- BIG this
-                                                        equpment model Big size Total (4EA)
+                                                <h2 class="font-bold text-xl">DYNA FOG FOGGING MACHINE- BIG</h2>
+                                                <p class="text-gray-600">DYNA FOG FOGGING  MACHINE- BIG  <br> Total  : 4 EA <br> <span class="font-bold"> Stock  : </span> 4 EA <br>
+                                                       
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
-                                                        document.getElementById('my_modal_11').showModal()">Click</button>
+                                                        document.getElementById('my_modal_11').showModal()">Condition</button>
                                                 <dialog id="my_modal_11" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">IN STORE</h3>
                                                                 <p class="py-4">THIS EQUPMENT IN SIDE STORE LOCATION:
-                                                                        VSIDE OF OOFICE ROOM
+                                                                        V SIDE OF OFICcE ROOM
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -373,22 +379,21 @@
                                         </div>
                                 </div>
                                 <!-- Card 12 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4 mt-16" src="./images/COLOR WHIGHT.webp" alt="">
                                         <div class="p-4 space-y-5">
                                                 <h2 class="font-bold text-xl">SMITH PORTABLE SPRAYER <br> COLOR WHIGHT
                                                 </h2>
-                                                <p class="text-gray-600">SMITH PORTABLE SPRAYER <br> COLOR WHIGHT this
-                                                        EQUPMENT total (14 EA) (in store 9) onside 4 EA
+                                                <p class="text-gray-600">SMITH PORTABLE SPRAYER  COLOR WHIGHT  <br> Total : 14 EA <br> <span class="font-bold">Stock : </span> 9 EA        
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
-                                                        document.getElementById('my_modal_12').showModal()">Click</button>
+                                                        document.getElementById('my_modal_12').showModal()">Condition</button>
                                                 <dialog id="my_modal_12" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
-                                                                <p class="py-4">Egr Reda Take Date : 24-Aug-2024 For
-                                                                        Ladnscipin Stin with him
+                                                                <p class="py-4">Egr Reda Take   For
+                                                                        Ladnscipin Still with him
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -409,25 +414,19 @@
 
                 <section class="py-8 lg:py-24">
                         <!-- title -->
-                        <div class="text-center">
-                                <h1 class="sm:text-3xl md:text-3xl font-bold mb-4">Equpment</h1>
-                                <p class="text-gray-600 max-w-2xl mx-auto">There are many variations of passages of
-                                        Lorem Ipsum available, but the majority have suffered alteration in some form,
-                                        by injected humour, or randomised words which don't look even slightly
-                                        believable. </p>
-                        </div>
+                   
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 " id="equipmentCards">
                                 <!-- Card 1 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card ">
                                         <img class="mx-auto pt-4" src="./images/SNAPPER & KAAZ LAWN MOWER.jpeg " alt="">
                                         <div class="p-4 space-y-5">
                                                 <h2 class="font-bold text-xl">SNAPPER & KAAZ <br> LAWN MOWER</h2>
-                                                <p class="text-gray-600">SNAPPER & KAAZ <br>LAWN MOWER Total 8 EA-4 on
-                                                        side 4 in store
+                                                <p class="text-gray-600">SNAPPER & KAAZ LAWN MOWER  <br> Total : 8 EA <br>  <span class="font-bold">Srock :</span> 4 EA
+                                                        
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto"
-                                                        onclick="document.getElementById('my_modal_1').showModal()">Click</button>
+                                                        onclick="document.getElementById('my_modal_1').showModal()">Condition</button>
                                                 <dialog id="my_modal_1" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
@@ -445,16 +444,15 @@
                                 </div>
 
                                 <!-- Card 2 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden mt-20">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden mt-20 equipment-card">
                                         <img class="mx-auto pt-4" src="./images/SHINDAWA 577P CHAIN SAW BIG.jpeg"
                                                 alt="">
                                         <div class="p-4 space-y-5">
                                                 <h2 class="font-bold text-xl">SHINDAWA 577P <br> CHAIN SAW BIG</h2>
-                                                <p class="text-gray-600">SHINDAWA 577P <br>CHAIN SAW BIG Total 12 Damage
-                                                        1
+                                                <p class="text-gray-600">SHINDAWA 577P CHAIN SAW BIG  <br> Total : 12  <br><span class="font-bold">Stock : </span> 2
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto"
-                                                        onclick="document.getElementById('my_modal_2').showModal()">Click</button>
+                                                        onclick="document.getElementById('my_modal_2').showModal()">Condition</button>
                                                 <dialog id="my_modal_2" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
@@ -463,7 +461,7 @@
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
-                                                                                <button class="btn">Close</button>
+                                                                                <button class="btn">Condition</button>
                                                                         </form>
                                                                 </div>
                                                         </div>
@@ -474,15 +472,15 @@
                                 <!-- Repeat the same structure for the remaining 8 cards, each with unique modal IDs -->
 
                                 <!-- Card 3 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden mt-10 ">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden mt-10  equipment-card">
                                         <img class="mx-auto pt-4 " src="./images/TANAKA ECS-3500 CHAIN SAW SMALL.jpeg"
                                                 alt="">
                                         <div class="p-4 space-y-5">
                                                 <h2 class="font-bold text-xl">TANAKA ECS-3500 <br> CHAIN SAW SMALL</h2>
-                                                <p class="text-gray-600">TANAKA ECS-3500 <br>CHAIN SAW SMALL
+                                                <p class="text-gray-600">TANAKA ECS-3500 CHAIN SAW SMALL <br> Total  : 4 <br> <span class="font-bold">Stock :</span> 2EA <br>
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto"
-                                                        onclick="document.getElementById('my_modal_13').showModal()">Click</button>
+                                                        onclick="document.getElementById('my_modal_13').showModal()">Condition</button>
                                                 <dialog id="my_modal_13" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
@@ -499,13 +497,14 @@
                                 </div>
 
                                 <!-- Card 4 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden ">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden  equipment-card">
                                         <img class="mx-auto pt-4" src="./images/TANAKA 12 CHAIN SAW SMALL.jpeg" alt="">
                                         <div class="p-4 space-y-5 mt-14">
                                                 <h2 class="font-bold text-xl font-serif">TANAKA 12" CHAIN <br> SAW SMALL
                                                 </h2>
-                                                <p class="text-gray-600">TANAKA 12" CHAIN <br>SAW SMALL total 5EA
-                                                </p>
+                                                <p class="text-gray-600">TANAKA 12" CHAIN SAW SMALL <br> Total : 4 <br><span
+                                                        class="font-bold">Stok </span>: 2EA <br>
+                                              </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
                                                         document.getElementById('my_modal_14').showModal()">Condition</button>
@@ -525,12 +524,13 @@
                                 </div>
 
                                 <!-- Card 5 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden mt-18">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden mt-18 equipment-card">
                                         <img class="mx-auto pt-4" src="./images/STEEL TANKER SPRAYER.jpeg" alt="">
                                         <div class="p-4 space-y-5 mt-20">
                                                 <h2 class="font-bold text-xl">STEEL TANKER SPRAYER</h2>
-                                                <p class="text-gray-600">STEEL TANKER SPRAYER <br> TOTAL 4EA
-                                                </p>
+                                                <p class="text-gray-600">STEEL TANKER SPRAYER <br> Total : 4 <br><span
+                                                        class="font-bold">Stok </span>: 2EA <br>
+                                        </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
                                                         document.getElementById('my_modal_15').showModal()">Condition</button>
@@ -550,15 +550,15 @@
                                 </div>
 
                                 <!-- Card 6 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4"
                                                 src="./images/PORTABLE PLASTIC SPRAYER COLOR YELLOW.jpeg" alt="">
                                         <div class="p-4 space-y-5">
                                                 <h2 class="font-bold text-xl">PORTABLE PLASTIC SPRAYER <br> COLOR YELLOW
                                                 </h2>
-                                                <p class="text-gray-600 font-serif">PORTABLE PLASTIC SPRAYER <br>COLOR
-                                                        YELLOW TOTAL 6EA, 1 ON SIDE 5 IN SOTRE
-                                                </p>
+                                                <p class="text-gray-600">PORTABLE PLASTIC SPRAYER  COLOR YELLOW<br> Total : 4 <br><span
+                                                        class="font-bold">Stok </span>: 2EA <br>
+                                        </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
                                                         document.getElementById('my_modal_16').showModal()">Condition</button>
@@ -579,14 +579,14 @@
                                 </div>
 
                                 <!-- Card 7 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden ">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden  equipment-card">
                                         <img class="mx-auto pt-4"
                                                 src="./images/KAAZ PLANT TRIMMER TM2600 PRUNING SAW-BIG.jpeg" alt="">
                                         <div class="p-4 space-y-5 mt-14">
                                                 <h2 class="font-bold text-xl">KAAZ PLANT TRIMMER TM2600 <br> PRUNING
                                                         SAW-BIG</h2>
-                                                <p class="text-gray-600">KAAZ PLANT TRIMMER TM2600 <br>PRUNING SAW-BIG
-                                                        TOTAL 18EA ONSIDE 12EA IN STROE 4
+                                                <p class="text-gray-600">KAAZ PLANT TRIMMER TM2600<br> Total : 4 <br><span
+                                                                class="font-bold">Stok </span>: 2EA <br>
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto"
                                                         onclick="document.getElementById('my_modal_17').showModal()">Condition</button>
@@ -607,14 +607,14 @@
                                 </div>
 
                                 <!-- Card 8 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4"
                                                 src="./images/MARUYAMA POWER BLOWER BL8200SP & BL900.jpeg " alt="">
                                         <div class="p-4 space-y-5 mt-10"">
                                                 <h2 class=" font-bold text-xl">MARUYAMA POWER BLOWER <br> BL8200SP &
                                                 BL900</h2>
-                                                <p class="text-gray-600">MARUYAMA POWER BLOWER<br> BL8200SP & BL900
-                                                        TOTAL 12EA ONSIDE 9 1 DAMAGE IN STORE 0
+                                                <p class="text-gray-600">MARUYAMA POWER BLOWER BL8200SP & BL900 <br>
+                                                        Total : 4 <br><span class="font-bold">Stok </span>: 2EA <br>
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
@@ -636,11 +636,12 @@
                                 </div>
 
                                 <!-- Card 9 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden  ">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden  equipment-card ">
                                         <img class="mx-auto pt-4" src="./images/LITTLE WONDER PRO EDGER.jpeg" alt="">
                                         <div class="p-4 space-y-5 mt-24">
                                                 <h2 class="font-bold text-xl">LITTLE WONDER <br> PRO EDGER</h2>
-                                                <p class="text-gray-600">Creamer could be <br> replaced by fresh milk
+                                                <p class="text-gray-600">LITTLE WONDER PRO EDGER<br> Total : 4 <br><span
+                                                                class="font-bold">Stok </span>: 2EA <br>
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
@@ -661,7 +662,7 @@
                                 </div>
 
                                 <!-- Card 10 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/WATER PUMP.jpeg" alt="">
                                         <div class="p-4 space-y-5 mt-20">
                                                 <h2 class="font-bold text-xl">WATER PUMP </h2>
@@ -686,7 +687,7 @@
                                         </div>
                                 </div>
                                 <!-- Card 11 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-1" src="./images/1_org_zoom.webp" alt="">
                                         <div class="p-4">
                                                 <h2 class="font-bold text-xl">BOSCH BIG GRENDER</h2>
@@ -711,7 +712,7 @@
                                         </div>
                                 </div>
                                 <!-- Card 12 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden ">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card ">
                                         <img class="mx-auto pt-4 mt-16" src="./images/JIG SHAW.jpeg" alt="">
                                         <div class="p-4 mt-20 space-y-3">
                                                 <h2 class="font-bold text-xl">JIG SHAW</h2>
@@ -742,9 +743,9 @@
                 <!-- Irrigation-->
                 <section class=" lg:py-24">
                         <!-- title -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="equipmentCards">
                                 <!-- Card 1 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/BOSCH BIG DRILL MACHINE.webp" alt="">
                                         <div class="p-4 space-y-4">
                                                 <h2 class="font-bold text-xl">BOSCH BIG <br> DRILL MACHINE </h2>
@@ -770,7 +771,7 @@
                                 </div>
 
                                 <!-- Card 2 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4 mt-2" src="./images/BOSCH SMALL DRILL MACHIN.jpeg"
                                                 alt="">
                                         <div class="p-4 space-y-3">
@@ -799,7 +800,7 @@
                                 <!-- Repeat the same structure for the remaining 8 cards, each with unique modal IDs -->
 
                                 <!-- Card 3 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4 mt-5" src="./images/BOSCH SMALL GRENDER.webp" alt="">
                                         <div class="p-4 space-y-4 mt-10">
                                                 <h2 class="font-bold text-xl">BOSCH SMALL GRENDER</h2>
@@ -825,7 +826,7 @@
                                 </div>
 
                                 <!-- Card 4 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/MAKIT HAEATING GUN.jpeg" alt="">
                                         <div class="p-4 space-x-3 mt-5">
                                                 <h2 class="font-bold text-xl">MAKIT HAEATING GUN </h2>
@@ -851,7 +852,7 @@
                                 </div>
 
                                 <!-- Card 5 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4 mt-5   " src="./images/CROWN WOOD CUTTER.webp" alt="">
                                         <div class="p-4 space-y-5 mt-16">
                                                 <h2 class="font-bold text-xl">CROWN WOOD CUTTER</h2>
@@ -878,7 +879,7 @@
                                 </div>
 
                                 <!-- Card 6 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/BOSCH AIR BLOWER SMALL.jpeg" alt="">
                                         <div class="p-4 space-y-4">
                                                 <h2 class="font-bold text-xl">BOSCH AIR BLOWER <br> SMALL </h2>
@@ -906,7 +907,7 @@
                                 </div>
 
                                 <!-- Card 7 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4" src="./images/BLACK & DACKERS SCREW GUN.jpeg" alt="">
                                         <div class="p-4 mt-4 space-y-4">
                                                 <h2 class="font-bold text-xl">BLACK & DACKERS <br> SCREW GUN </h2>
@@ -933,8 +934,9 @@
                                 </div>
 
                                 <!-- Card 8 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
-                                        <img class="mx-auto pt-4" src="./images/MONOFOLD GUEGE WITH PRESSURE METER.jpeg" alt="">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
+                                        <img class="mx-auto pt-4" src="./images/MONOFOLD GUEGE WITH PRESSURE METER.jpeg"
+                                                alt="">
                                         <div class="p-4 mt-3 space-y-2">
                                                 <h2 class="font-bold text-xl">MONOFOLD GUEGE WITH <br> PRESSURE METER
                                                 </h2>
@@ -948,7 +950,9 @@
                                                 <dialog id="my_modal_31" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
-                                                                <p class="py-4 text-red-500">this MONOFOLD GUEGE WITH PRESSURE METER with wrokshop not available in store
+                                                                <p class="py-4 text-red-500">this MONOFOLD GUEGE WITH
+                                                                        PRESSURE METER with wrokshop not available in
+                                                                        store
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -961,11 +965,11 @@
                                 </div>
 
                                 <!-- Card 9 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4 mt-5" src="./images/OXYGEN & ACETYLENE.jpeg" alt="">
                                         <div class="p-4 space-y-3 mt-14">
                                                 <h2 class="font-bold text-xl">OXYGEN & ACETYLENE</h2>
-                                                <p class="text-gray-600"> OXYGEN & ACETYLENE 
+                                                <p class="text-gray-600"> OXYGEN & ACETYLENE
                                                         <br class="font-bold">Total : 1 EA
                                                         <br><span class="font-bold  text-red-500">Stok</span>: 0 EA
                                                 </p>
@@ -975,7 +979,8 @@
                                                 <dialog id="my_modal_32" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
-                                                                <p class="py-4 text-red-500">OXYGEN & ACETYLENE with <br> wrokshope in store not available 0.....
+                                                                <p class="py-4 text-red-500">OXYGEN & ACETYLENE with
+                                                                        <br> wrokshope in store not available 0.....
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -988,12 +993,14 @@
                                 </div>
 
                                 <!-- Card 10 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4 mt-2" src="./images/KAAZ HEDGE TRIMMER.jpeg" alt="">
                                         <div class="p-4 space-y-3 mt-3">
                                                 <h2 class="font-bold text-xl">KAAZ HEDGE TRIMMER</h2>
-                                                <p class="text-gray-600">KAAZ HEDGE TRIMMER <br><span class="font-bold">Total </span>: 8 EA<br><span class="font-bold">Stok</span>:8 EA
-                                                        
+                                                <p class="text-gray-600">KAAZ HEDGE TRIMMER <br><span
+                                                                class="font-bold">Total </span>: 8 EA<br><span
+                                                                class="font-bold">Stok</span>:8 EA
+
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
@@ -1001,7 +1008,8 @@
                                                 <dialog id="my_modal_33" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">IN-STORE</h3>
-                                                                <p class="py-4">this items available in stroe location in fast race
+                                                                <p class="py-4">this items available in stroe location
+                                                                        in fast race
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -1013,11 +1021,13 @@
                                         </div>
                                 </div>
                                 <!-- Card 11 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4 mt-5" src="./images/KAAZ LAWN MOWER.jpeg" alt="">
                                         <div class="p-4 space-y-3 mt-10">
                                                 <h2 class="font-bold text-xl">KAAZ LAWN MOWER </h2>
-                                                <p class="text-gray-600">KAAZ LAWN MOWER <br><span class="font-bold">Total </span>:2 EA<br><span class="font-bold">Stok</span>:2 EA
+                                                <p class="text-gray-600">KAAZ LAWN MOWER <br><span
+                                                                class="font-bold">Total </span>:2 EA<br><span
+                                                                class="font-bold">Stok</span>:2 EA
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
@@ -1025,7 +1035,8 @@
                                                 <dialog id="my_modal_34" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">ON_SIDE</h3>
-                                                                <p class="py-4">KAAZ LAWN MOWER this items in side the CUTTON in side the store 2
+                                                                <p class="py-4">KAAZ LAWN MOWER this items in side the
+                                                                        CUTTON in side the store 2
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -1037,11 +1048,13 @@
                                         </div>
                                 </div>
                                 <!-- Card 12 -->
-                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden">
+                                <div class="rounded-lg shadow-md bg-gray-50 overflow-hidden equipment-card">
                                         <img class="mx-auto pt-4 mt-2" src="./images/WELDING CUTING SET.jpeg" alt="">
                                         <div class="p-4 mt-2 space-y-4">
                                                 <h2 class="font-bold text-xl">WELDING CUTING SET</h2>
-                                                <p class="text-gray-600">WELDING CUTING SET <br><span class="font-bold">Total </span>:1 SET<br><span class="font-bold">Stok</span>:1SET
+                                                <p class="text-gray-600">WELDING CUTING SET <br><span
+                                                                class="font-bold">Total </span>:1 SET<br><span
+                                                                class="font-bold">Stok</span>:1SET
                                                 </p>
                                                 <button class="btn btn-outline btn-accent btn-sm mt-2 mx-auto""
                                                         onclick="
@@ -1049,7 +1062,8 @@
                                                 <dialog id="my_modal_35" class="modal">
                                                         <div class="modal-box">
                                                                 <h3 class="text-lg font-bold">IN STORE</h3>
-                                                                <p class="py-4">WELDING CUTING SET IN STORE USEING MUSTFA DWOOD
+                                                                <p class="py-4">WELDING CUTING SET IN STORE USEING
+                                                                        MUSTFA DWOOD
                                                                 </p>
                                                                 <div class="modal-action">
                                                                         <form method="dialog">
@@ -1080,7 +1094,7 @@
                         </div>
                         <!-- text -->
                         <div>
-                                <h1 class="text-5xl font-bold mb-5">Great Tea, Freshly <br> Presented</h1>
+                                <h1 class="text-5xl font-bold mb-5"> This all equpment for 4012 This Projicet   </h1>
                                 <p class="text-gray-500">The meaning of gong cha is chanese is to provide the best tea
                                         to emperor from all possessions . It represents the highest quality and self
                                         expectation. Establishing in 2006, Gong cha had been deeply appreciated by its
@@ -1088,8 +1102,7 @@
                                         from Taiwan.</p>
                                 <br>
                                 <h1 class="text-2xl font-bold mb-5">Unique Taste</h1>
-                                <p class="text-gray-500">A Unique and different style from other teapots gives a <br>
-                                        luxurious and minimalist impression</p>
+                              
                                 <br>
                                 <h1 class="text-2xl font-bold mb-5">Premium Quality</h1>
                                 <p class="text-gray-500">Premium Quality that makes tea more elegant and more <br>
@@ -1100,6 +1113,7 @@
 
 
         </main>
+        <script src="./scripit.js"></script>
 
 </body>
 
